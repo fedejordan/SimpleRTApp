@@ -15,11 +15,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         addTwitterButton()
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if let session = TWTRTwitter.sharedInstance().sessionStore.session() {
+            self.performSegue(withIdentifier: "retweetViewControllerSegue", sender: nil)
+        }
     }
 
     private func addTwitterButton() {
