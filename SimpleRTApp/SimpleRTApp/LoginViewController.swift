@@ -9,7 +9,7 @@
 import UIKit
 import TwitterKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         let logInButton = TWTRLogInButton(logInCompletion: { session, error in
             if let session = session {
                 print("signed in as \(session.userName)");
+                self.performSegue(withIdentifier: "retweetViewControllerSegue", sender: nil)
             } else {
                 let errorDescription = error?.localizedDescription ?? "unknown"
                 print("error: \(errorDescription)");

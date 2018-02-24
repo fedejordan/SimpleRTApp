@@ -10,19 +10,64 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleRTApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="SimpleRTApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="sNA-Bx-mrW" kind="presentation" identifier="retweetViewControllerSegue" id="1x7-3b-IGL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-25" y="113"/>
+        </scene>
+        <!--Retweet View Controller-->
+        <scene sceneID="95d-mi-Zgp">
+            <objects>
+                <viewController id="sNA-Bx-mrW" customClass="RetweetViewController" customModule="SimpleRTApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Gj-EQ-d3v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aX-Lw-QKk">
+                                <rect key="frame" x="119.5" y="318" width="135" height="30"/>
+                                <state key="normal" title="Retweet by TweetId"/>
+                                <connections>
+                                    <action selector="didSelectRetweetWithSender:" destination="sNA-Bx-mrW" eventType="touchUpInside" id="19W-qW-2h2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHs-pU-71r">
+                                <rect key="frame" x="20" y="280" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="twitter"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sHs-pU-71r" firstAttribute="centerX" secondItem="2Gj-EQ-d3v" secondAttribute="centerX" id="CI9-5Z-sE3"/>
+                            <constraint firstItem="9aX-Lw-QKk" firstAttribute="centerY" secondItem="2Gj-EQ-d3v" secondAttribute="centerY" id="HcR-7V-TVj"/>
+                            <constraint firstItem="3OC-ny-aVx" firstAttribute="trailing" secondItem="sHs-pU-71r" secondAttribute="trailing" constant="20" id="KUP-IW-maa"/>
+                            <constraint firstItem="9aX-Lw-QKk" firstAttribute="centerX" secondItem="2Gj-EQ-d3v" secondAttribute="centerX" id="jsN-f5-kHx"/>
+                            <constraint firstItem="9aX-Lw-QKk" firstAttribute="top" secondItem="sHs-pU-71r" secondAttribute="bottom" constant="8" id="oVr-d8-brg"/>
+                            <constraint firstItem="sHs-pU-71r" firstAttribute="leading" secondItem="3OC-ny-aVx" secondAttribute="leading" constant="20" id="qXr-X9-Kg2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3OC-ny-aVx"/>
+                    </view>
+                    <connections>
+                        <outlet property="tweetIdTextField" destination="sHs-pU-71r" id="lmX-cy-rzr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3a-I7-eI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="113"/>
         </scene>
     </scenes>
 </document>
