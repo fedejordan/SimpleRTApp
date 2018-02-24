@@ -13,23 +13,54 @@ class RetweetViewController: UIViewController {
 
     @IBOutlet private weak var tweetIdTextField: UITextField!
 
+    let client = TWTRAPIClient.withCurrentUser()
+    
     @IBAction private func didSelectRetweet(sender: UIButton) {
         guard let tweetId = tweetIdTextField.text else { return }
-        let client = TWTRAPIClient()
         client.loadTweet(withID: tweetId) { (tweet, error) -> Void in
             if let text = tweet?.text {
-                self.showAlert(withText: text)
+                self.showRetweetAlert(withText: text)
             } else {
-                self.showAlert(withText: "Data not found")
+                self.showSimpleAlert(withText: "Data not found")
             }
         }
     }
     
-    private func showAlert(withText text: String) {
-        let alert = UIAlertController(title: "Tweet example", message: text, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(alertAction)
+    private func showSimpleAlert(withText text: String) {
+        let alert = UIAlertController(title: "SimpleRTApp", message: text, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func showRetweetAlert(withText text: String) {
+        let alert = UIAlertController(title: "Tweet example", message: text, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        let retweetAction = UIAlertAction(title: "Retweet", style: .default) { (action) in
+            self.retweet()
+        }
+        alert.addAction(okAction)
+        alert.addAction(retweetAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func retweet() {
+        guard let tweetId = tweetIdTextField.text else { return }
+        let statusesShowEndpoint = "https://api.twitter.com/1.1/statuses/retweet/" + tweetId + ".json"
+        let params = ["id": tweetId]
+        var clientError : NSError?
+        
+        let request = client.urlRequest(withMethod: "POST", urlString: statusesShowEndpoint, parameters: params, error: &clientError)
+        
+        
+        client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
+            if let connectionError = connectionError {
+                print("Error: \(connectionError)")
+                self.showSimpleAlert(withText: "Retweet error")
+            } else {
+                self.showSimpleAlert(withText: "Retweet done!")
+            }
+        }
     }
 
 }
