@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleRTApp/ViewController.swift"
+            timestampString = "541188321.195848"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "addTwitterButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleRTApp/ViewController.swift"
+            timestampString = "541188321.196435"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "addTwitterButton()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.TWTRSession&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SimpleRTApp.ViewController.(addTwitterButton in _FDF870113607BF74BA8522A142E31A95)() -&gt; ()"
+                  moduleName = "SimpleRTApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/federicojordan/Blog/SimpleRTApp/SimpleRTApp/SimpleRTApp/ViewController.swift"
+                  timestampString = "541188321.672011"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.String in closure #1 (Swift.Optional&lt;__ObjC.TWTRSession&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SimpleRTApp.ViewController.(addTwitterButton in _FDF870113607BF74BA8522A142E31A95)() -&gt; ()"
+                  moduleName = "SimpleRTApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/federicojordan/Blog/SimpleRTApp/SimpleRTApp/SimpleRTApp/ViewController.swift"
+                  timestampString = "541188321.67585"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6891C15CDD16DA20FD2610C0 /* Pods_SimpleRTApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C505CEC12346744BFF53A6C6 /* Pods_SimpleRTApp.framework */; };
 		6DFBF8852041D4B2006CEB9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBF8842041D4B2006CEB9C /* AppDelegate.swift */; };
 		6DFBF8872041D4B2006CEB9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBF8862041D4B2006CEB9C /* ViewController.swift */; };
 		6DFBF88A2041D4B2006CEB9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DFBF8882041D4B2006CEB9C /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C84B2C406B05212D5025C89 /* Pods-SimpleRTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleRTApp/Pods-SimpleRTApp.release.xcconfig"; sourceTree = "<group>"; };
 		6DFBF8812041D4B2006CEB9C /* SimpleRTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFBF8842041D4B2006CEB9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DFBF8862041D4B2006CEB9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,9 @@
 		6DFBF88B2041D4B2006CEB9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DFBF88E2041D4B2006CEB9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DFBF8902041D4B2006CEB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DFBF8962041DD93006CEB9C /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		810EB765718BC95F25AC5853 /* Pods-SimpleRTApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRTApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleRTApp/Pods-SimpleRTApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C505CEC12346744BFF53A6C6 /* Pods_SimpleRTApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleRTApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +34,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6891C15CDD16DA20FD2610C0 /* Pods_SimpleRTApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BEB75F8C251A37C92AC2972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DFBF8962041DD93006CEB9C /* SafariServices.framework */,
+				C505CEC12346744BFF53A6C6 /* Pods_SimpleRTApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67676C5C16620AB1D22AFE17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				810EB765718BC95F25AC5853 /* Pods-SimpleRTApp.debug.xcconfig */,
+				1C84B2C406B05212D5025C89 /* Pods-SimpleRTApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6DFBF8782041D4B2006CEB9C = {
 			isa = PBXGroup;
 			children = (
 				6DFBF8832041D4B2006CEB9C /* SimpleRTApp */,
 				6DFBF8822041D4B2006CEB9C /* Products */,
+				67676C5C16620AB1D22AFE17 /* Pods */,
+				4BEB75F8C251A37C92AC2972 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DFBF8932041D4B2006CEB9C /* Build configuration list for PBXNativeTarget "SimpleRTApp" */;
 			buildPhases = (
+				27856A5F5538D73B993DAFD3 /* [CP] Check Pods Manifest.lock */,
 				6DFBF87D2041D4B2006CEB9C /* Sources */,
 				6DFBF87E2041D4B2006CEB9C /* Frameworks */,
 				6DFBF87F2041D4B2006CEB9C /* Resources */,
+				D2F5ACA1A003C752FC2ACF9F /* [CP] Embed Pods Frameworks */,
+				A964CA157520DF0F0343680A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +159,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27856A5F5538D73B993DAFD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleRTApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A964CA157520DF0F0343680A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleRTApp/Pods-SimpleRTApp-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleRTApp/Pods-SimpleRTApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2F5ACA1A003C752FC2ACF9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleRTApp/Pods-SimpleRTApp-frameworks.sh",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleRTApp/Pods-SimpleRTApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6DFBF87D2041D4B2006CEB9C /* Sources */ = {
@@ -272,6 +361,7 @@
 		};
 		6DFBF8942041D4B2006CEB9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 810EB765718BC95F25AC5853 /* Pods-SimpleRTApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +377,7 @@
 		};
 		6DFBF8952041D4B2006CEB9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C84B2C406B05212D5025C89 /* Pods-SimpleRTApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
