@@ -7,5 +7,6 @@ target 'SimpleRTApp' do
 
   # Pods for SimpleRTApp
   pod 'TwitterKit'
+  pod 'Alamofire', '~> 4.7'
 
 end

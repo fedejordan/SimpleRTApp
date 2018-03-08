@@ -11,6 +11,8 @@ import TwitterKit
 
 class LoginViewController: UIViewController {
 
+    let hashtagsSegueIdentifier = "hashtagsViewControllerSegue"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +25,7 @@ class LoginViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if let session = TWTRTwitter.sharedInstance().sessionStore.session() {
-            self.performSegue(withIdentifier: "retweetViewControllerSegue", sender: nil)
+            self.performSegue(withIdentifier: hashtagsSegueIdentifier, sender: nil)
         }
     }
 
@@ -31,7 +33,7 @@ class LoginViewController: UIViewController {
         let logInButton = TWTRLogInButton(logInCompletion: { session, error in
             if let session = session {
                 print("signed in as \(session.userName)");
-                self.performSegue(withIdentifier: "retweetViewControllerSegue", sender: nil)
+                self.performSegue(withIdentifier: self.hashtagsSegueIdentifier, sender: nil)
             } else {
                 let errorDescription = error?.localizedDescription ?? "unknown"
                 print("error: \(errorDescription)");

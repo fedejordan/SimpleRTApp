@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6891C15CDD16DA20FD2610C0 /* Pods_SimpleRTApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C505CEC12346744BFF53A6C6 /* Pods_SimpleRTApp.framework */; };
+		6D241AD62050ED7800187166 /* PostedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D241AD52050ED7800187166 /* PostedTweet.swift */; };
+		6D241AD82050EF7100187166 /* HashtagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D241AD72050EF7100187166 /* HashtagsViewController.swift */; };
+		6DF5F80C204FA20D009594E7 /* TweetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5F80B204FA20D009594E7 /* TweetRequest.swift */; };
+		6DF5F80E204FA336009594E7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5F80D204FA336009594E7 /* NetworkManager.swift */; };
 		6DFBF8852041D4B2006CEB9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBF8842041D4B2006CEB9C /* AppDelegate.swift */; };
 		6DFBF8872041D4B2006CEB9C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBF8862041D4B2006CEB9C /* LoginViewController.swift */; };
 		6DFBF88A2041D4B2006CEB9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DFBF8882041D4B2006CEB9C /* Main.storyboard */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		1C84B2C406B05212D5025C89 /* Pods-SimpleRTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleRTApp/Pods-SimpleRTApp.release.xcconfig"; sourceTree = "<group>"; };
+		6D241AD52050ED7800187166 /* PostedTweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedTweet.swift; sourceTree = "<group>"; };
+		6D241AD72050EF7100187166 /* HashtagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagsViewController.swift; sourceTree = "<group>"; };
+		6DF5F80B204FA20D009594E7 /* TweetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRequest.swift; sourceTree = "<group>"; };
+		6DF5F80D204FA336009594E7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6DFBF8812041D4B2006CEB9C /* SimpleRTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFBF8842041D4B2006CEB9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DFBF8862041D4B2006CEB9C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -83,8 +91,12 @@
 			isa = PBXGroup;
 			children = (
 				6DFBF8842041D4B2006CEB9C /* AppDelegate.swift */,
+				6DF5F80B204FA20D009594E7 /* TweetRequest.swift */,
+				6D241AD52050ED7800187166 /* PostedTweet.swift */,
+				6DF5F80D204FA336009594E7 /* NetworkManager.swift */,
 				6DFBF8862041D4B2006CEB9C /* LoginViewController.swift */,
 				6DFBF8972041E3C2006CEB9C /* RetweetViewController.swift */,
+				6D241AD72050EF7100187166 /* HashtagsViewController.swift */,
 				6DFBF8882041D4B2006CEB9C /* Main.storyboard */,
 				6DFBF88B2041D4B2006CEB9C /* Assets.xcassets */,
 				6DFBF88D2041D4B2006CEB9C /* LaunchScreen.storyboard */,
@@ -208,11 +220,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleRTApp/Pods-SimpleRTApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
@@ -230,7 +244,11 @@
 			files = (
 				6DFBF8982041E3C2006CEB9C /* RetweetViewController.swift in Sources */,
 				6DFBF8872041D4B2006CEB9C /* LoginViewController.swift in Sources */,
+				6DF5F80E204FA336009594E7 /* NetworkManager.swift in Sources */,
+				6D241AD82050EF7100187166 /* HashtagsViewController.swift in Sources */,
 				6DFBF8852041D4B2006CEB9C /* AppDelegate.swift in Sources */,
+				6D241AD62050ED7800187166 /* PostedTweet.swift in Sources */,
+				6DF5F80C204FA20D009594E7 /* TweetRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

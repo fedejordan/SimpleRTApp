@@ -22,6 +22,7 @@
                     </view>
                     <connections>
                         <segue destination="sNA-Bx-mrW" kind="presentation" identifier="retweetViewControllerSegue" id="1x7-3b-IGL"/>
+                        <segue destination="z9C-NL-JCm" kind="show" identifier="hashtagsViewControllerSegue" id="Yc2-JX-QTn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,6 +69,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3a-I7-eI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="855" y="113"/>
+        </scene>
+        <!--Hashtags View Controller-->
+        <scene sceneID="Pdw-qv-Nlt">
+            <objects>
+                <viewController id="z9C-NL-JCm" customClass="HashtagsViewController" customModule="SimpleRTApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MWa-Sb-lTc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hashtags. Add one!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5C-Xf-zvC">
+                                <rect key="frame" x="100.5" y="323" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nx-oX-UrB">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.65490196079999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zg3-gO-C71"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapMainActionWithSender:" destination="z9C-NL-JCm" eventType="touchUpInside" id="aNE-3U-Aym"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="58M-lO-vXe" firstAttribute="trailing" secondItem="5nx-oX-UrB" secondAttribute="trailing" id="7Ud-dm-fVJ"/>
+                            <constraint firstItem="v5C-Xf-zvC" firstAttribute="centerY" secondItem="MWa-Sb-lTc" secondAttribute="centerY" id="9R3-2l-gsx"/>
+                            <constraint firstItem="58M-lO-vXe" firstAttribute="bottom" secondItem="5nx-oX-UrB" secondAttribute="bottom" id="Qnj-lY-QIK"/>
+                            <constraint firstItem="5nx-oX-UrB" firstAttribute="leading" secondItem="58M-lO-vXe" secondAttribute="leading" id="pVG-NH-7OD"/>
+                            <constraint firstItem="v5C-Xf-zvC" firstAttribute="centerX" secondItem="MWa-Sb-lTc" secondAttribute="centerX" id="yzM-oA-uyy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="58M-lO-vXe"/>
+                    </view>
+                    <connections>
+                        <outlet property="hashtagsLabel" destination="v5C-Xf-zvC" id="WB2-Qd-plj"/>
+                        <outlet property="mainActionButton" destination="5nx-oX-UrB" id="lDj-bk-3Xk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1U-At-eYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="903"/>
         </scene>
     </scenes>
 </document>
