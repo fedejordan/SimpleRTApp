@@ -58,7 +58,18 @@ class RetweetViewController: UIViewController {
                 print("Error: \(connectionError)")
                 self.showSimpleAlert(withText: "Retweet error")
             } else {
+                self.savePostedTweet(forTweetId: tweetId, tweetRequestId: "1234")
+            }
+        }
+    }
+    
+    private func savePostedTweet(forTweetId tweetId: String, tweetRequestId: String) {
+        let networkManager = NetworkManager()
+        networkManager.postPostedTweet(forTweetRequestId: tweetRequestId, tweetId: tweetId) { (success) in
+            if success {
                 self.showSimpleAlert(withText: "Retweet done!")
+            } else {
+                self.showSimpleAlert(withText: "Error saving posted tweet in server")
             }
         }
     }
