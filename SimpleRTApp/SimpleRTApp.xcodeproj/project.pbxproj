@@ -24,6 +24,7 @@
 		1C84B2C406B05212D5025C89 /* Pods-SimpleRTApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRTApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleRTApp/Pods-SimpleRTApp.release.xcconfig"; sourceTree = "<group>"; };
 		6D241AD52050ED7800187166 /* PostedTweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedTweet.swift; sourceTree = "<group>"; };
 		6D241AD72050EF7100187166 /* HashtagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagsViewController.swift; sourceTree = "<group>"; };
+		6D9046D42058965D002C8B53 /* SimpleRTApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleRTApp.entitlements; sourceTree = "<group>"; };
 		6DF5F80B204FA20D009594E7 /* TweetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRequest.swift; sourceTree = "<group>"; };
 		6DF5F80D204FA336009594E7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6DFBF8812041D4B2006CEB9C /* SimpleRTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +91,7 @@
 		6DFBF8832041D4B2006CEB9C /* SimpleRTApp */ = {
 			isa = PBXGroup;
 			children = (
+				6D9046D42058965D002C8B53 /* SimpleRTApp.entitlements */,
 				6DFBF8842041D4B2006CEB9C /* AppDelegate.swift */,
 				6DF5F80B204FA20D009594E7 /* TweetRequest.swift */,
 				6D241AD52050ED7800187166 /* PostedTweet.swift */,
@@ -141,6 +143,11 @@
 					6DFBF8802041D4B2006CEB9C = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -386,6 +393,7 @@
 			baseConfigurationReference = 810EB765718BC95F25AC5853 /* Pods-SimpleRTApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleRTApp/SimpleRTApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5523VLT8V;
 				INFOPLIST_FILE = SimpleRTApp/Info.plist;
@@ -402,6 +410,7 @@
 			baseConfigurationReference = 1C84B2C406B05212D5025C89 /* Pods-SimpleRTApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleRTApp/SimpleRTApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5523VLT8V;
 				INFOPLIST_FILE = SimpleRTApp/Info.plist;
