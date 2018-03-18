@@ -10,6 +10,8 @@
 		6891C15CDD16DA20FD2610C0 /* Pods_SimpleRTApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C505CEC12346744BFF53A6C6 /* Pods_SimpleRTApp.framework */; };
 		6D241AD62050ED7800187166 /* PostedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D241AD52050ED7800187166 /* PostedTweet.swift */; };
 		6D241AD82050EF7100187166 /* HashtagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D241AD72050EF7100187166 /* HashtagsViewController.swift */; };
+		6DB30E95205E3F7700C5C30A /* PushNotificationsActionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB30E94205E3F7700C5C30A /* PushNotificationsActionsHandler.swift */; };
+		6DBB86F1205E3BC800DFE5A7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DFBF8902041D4B2006CEB9C /* Info.plist */; };
 		6DF5F80C204FA20D009594E7 /* TweetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5F80B204FA20D009594E7 /* TweetRequest.swift */; };
 		6DF5F80E204FA336009594E7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5F80D204FA336009594E7 /* NetworkManager.swift */; };
 		6DFBF8852041D4B2006CEB9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBF8842041D4B2006CEB9C /* AppDelegate.swift */; };
@@ -25,6 +27,7 @@
 		6D241AD52050ED7800187166 /* PostedTweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedTweet.swift; sourceTree = "<group>"; };
 		6D241AD72050EF7100187166 /* HashtagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagsViewController.swift; sourceTree = "<group>"; };
 		6D9046D42058965D002C8B53 /* SimpleRTApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleRTApp.entitlements; sourceTree = "<group>"; };
+		6DB30E94205E3F7700C5C30A /* PushNotificationsActionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsActionsHandler.swift; sourceTree = "<group>"; };
 		6DF5F80B204FA20D009594E7 /* TweetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRequest.swift; sourceTree = "<group>"; };
 		6DF5F80D204FA336009594E7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6DFBF8812041D4B2006CEB9C /* SimpleRTApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleRTApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +102,7 @@
 				6DFBF8862041D4B2006CEB9C /* LoginViewController.swift */,
 				6DFBF8972041E3C2006CEB9C /* RetweetViewController.swift */,
 				6D241AD72050EF7100187166 /* HashtagsViewController.swift */,
+				6DB30E94205E3F7700C5C30A /* PushNotificationsActionsHandler.swift */,
 				6DFBF8882041D4B2006CEB9C /* Main.storyboard */,
 				6DFBF88B2041D4B2006CEB9C /* Assets.xcassets */,
 				6DFBF88D2041D4B2006CEB9C /* LaunchScreen.storyboard */,
@@ -174,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBB86F1205E3BC800DFE5A7 /* Info.plist in Resources */,
 				6DFBF88F2041D4B2006CEB9C /* LaunchScreen.storyboard in Resources */,
 				6DFBF88C2041D4B2006CEB9C /* Assets.xcassets in Resources */,
 				6DFBF88A2041D4B2006CEB9C /* Main.storyboard in Resources */,
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DFBF8982041E3C2006CEB9C /* RetweetViewController.swift in Sources */,
+				6DB30E95205E3F7700C5C30A /* PushNotificationsActionsHandler.swift in Sources */,
 				6DFBF8872041D4B2006CEB9C /* LoginViewController.swift in Sources */,
 				6DF5F80E204FA336009594E7 /* NetworkManager.swift in Sources */,
 				6D241AD82050EF7100187166 /* HashtagsViewController.swift in Sources */,

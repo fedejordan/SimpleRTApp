@@ -14,15 +14,16 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var pushNotificationsHandler: PushNotificationsActionsHandler? = nil
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        TWTRTwitter.sharedInstance().start(withConsumerKey: "ConsumerKey", consumerSecret: "ConsumerSecret")
-        let networkManager = NetworkManager()
-        networkManager.getTweetRequest(byId: "4") { (tweetRequest) in
-            print(tweetRequest)
+        
+        if let window = window {
+            pushNotificationsHandler = PushNotificationsActionsHandler(withWindow: window)
+            UNUserNotificationCenter.current().delegate = pushNotificationsHandler
         }
+        
+        TWTRTwitter.sharedInstance().start(withConsumerKey: "ConsumerKey", consumerSecret: "ConsumerSecret")
         registerForPushNotifications()
         return true
     }
@@ -46,14 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Failed to register: \(error)")
     }
     
-    func application(
-        _ application: UIApplication,
-        didReceiveRemoteNotification userInfo: [AnyHashable : Any],
-        fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        
-        let aps = userInfo["aps"] as! [String: AnyObject]
-    }
-    
     // MARK:- Push notifications
     
     func registerForPushNotifications() {
@@ -63,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             guard granted else { return }
             
-            let retweetAction = UNNotificationAction(identifier: "retweet_action_identifier", title: "Retweet", options: [.foreground])
+            let retweetAction = UNNotificationAction(identifier: PushNotificationActionIdentifier.retweetActionIdentifier.rawValue, title: "Retweet", options: [.foreground])
             
             let retweetCategory = UNNotificationCategory(identifier: "RETWEET", actions: [retweetAction], intentIdentifiers: [], options: [])
             

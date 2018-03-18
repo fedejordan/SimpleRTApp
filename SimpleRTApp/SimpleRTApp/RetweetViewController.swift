@@ -14,6 +14,24 @@ class RetweetViewController: UIViewController {
     @IBOutlet private weak var tweetIdTextField: UITextField!
 
     let client = TWTRAPIClient.withCurrentUser()
+    private var automaticRetweet: Bool = false
+    private var prefilledTweetId: String = ""
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if automaticRetweet {
+            tweetIdTextField.text = prefilledTweetId
+            retweet()
+            automaticRetweet = false
+            prefilledTweetId = ""
+        }
+    }
+    
+    func setupAutomaticRetweet(withTweetId tweetId: String) {
+        automaticRetweet = true
+        prefilledTweetId = tweetId
+    }
     
     @IBAction private func didSelectRetweet(sender: UIButton) {
         guard let tweetId = tweetIdTextField.text else { return }
@@ -24,6 +42,10 @@ class RetweetViewController: UIViewController {
                 self.showSimpleAlert(withText: "Data not found")
             }
         }
+    }
+    
+    @IBAction private func didSelectDismiss(sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     private func showSimpleAlert(withText text: String) {

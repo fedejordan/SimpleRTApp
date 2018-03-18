@@ -17,8 +17,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         addTwitterButton()
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

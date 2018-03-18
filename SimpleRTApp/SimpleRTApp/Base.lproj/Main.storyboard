@@ -32,7 +32,7 @@
         <!--Retweet View Controller-->
         <scene sceneID="95d-mi-Zgp">
             <objects>
-                <viewController id="sNA-Bx-mrW" customClass="RetweetViewController" customModule="SimpleRTApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="retweetViewController" id="sNA-Bx-mrW" customClass="RetweetViewController" customModule="SimpleRTApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Gj-EQ-d3v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,12 +50,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="twitter"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0p0-27-iJt">
+                                <rect key="frame" x="16" y="20" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="didSelectDismissWithSender:" destination="sNA-Bx-mrW" eventType="touchUpInside" id="Wiv-XO-1Ty"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sHs-pU-71r" firstAttribute="centerX" secondItem="2Gj-EQ-d3v" secondAttribute="centerX" id="CI9-5Z-sE3"/>
                             <constraint firstItem="9aX-Lw-QKk" firstAttribute="centerY" secondItem="2Gj-EQ-d3v" secondAttribute="centerY" id="HcR-7V-TVj"/>
                             <constraint firstItem="3OC-ny-aVx" firstAttribute="trailing" secondItem="sHs-pU-71r" secondAttribute="trailing" constant="20" id="KUP-IW-maa"/>
+                            <constraint firstItem="0p0-27-iJt" firstAttribute="top" secondItem="3OC-ny-aVx" secondAttribute="top" id="WRg-nb-Tv0"/>
+                            <constraint firstItem="0p0-27-iJt" firstAttribute="leading" secondItem="3OC-ny-aVx" secondAttribute="leading" constant="16" id="dlp-ZJ-tR6"/>
                             <constraint firstItem="9aX-Lw-QKk" firstAttribute="centerX" secondItem="2Gj-EQ-d3v" secondAttribute="centerX" id="jsN-f5-kHx"/>
                             <constraint firstItem="9aX-Lw-QKk" firstAttribute="top" secondItem="sHs-pU-71r" secondAttribute="bottom" constant="8" id="oVr-d8-brg"/>
                             <constraint firstItem="sHs-pU-71r" firstAttribute="leading" secondItem="3OC-ny-aVx" secondAttribute="leading" constant="20" id="qXr-X9-Kg2"/>

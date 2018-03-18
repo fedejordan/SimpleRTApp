@@ -14,6 +14,7 @@ class HashtagsViewController: UIViewController {
     @IBOutlet private weak var mainActionButton: UIButton!
     
     private var actualTweetRequestId: String? = nil
+    private var deviceToken: String = "FakeDeviceToken"
     
     private enum MainAction {
         case addHashtags
@@ -118,8 +119,7 @@ class HashtagsViewController: UIViewController {
     }
     
     private func save(hashtags: String) {
-        let fakeDeviceToken = "FakeDeviceToken" // TODO:- Replace with actual deviceToken
-        networkManager.postTweetRequest(forDeviceToken: fakeDeviceToken, hashtags: hashtags) { (tweetRequest) in
+        networkManager.postTweetRequest(forDeviceToken: deviceToken, hashtags: hashtags) { (tweetRequest) in
             if let tweetRequestId = tweetRequest?.tweetRequestId {
                 let tweetRequestIdString = "\(tweetRequestId)"
                 self.actualTweetRequestId = tweetRequestIdString

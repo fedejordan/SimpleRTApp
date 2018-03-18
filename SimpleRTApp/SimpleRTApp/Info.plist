@@ -43,12 +43,14 @@
 	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>twitterkit-mJIo1RWkMQKt6nISwhEz3MCeX</string>
-			</array>
-		</dict>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>twitterkit-mJIo1RWkMQKt6nISwhEz3MCeX</string>
+            </array>
+        </dict>
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>

@@ -14,7 +14,7 @@ class NetworkManager: NSObject {
         case tweetRequest
         case postedTweet
         
-        static let baseURL = "http://localhost:3000/"
+        static let baseURL = "http://192.168.0.10:3000/"
         
         var url: String {
             return NetworkPath.baseURL + self.rawValue
