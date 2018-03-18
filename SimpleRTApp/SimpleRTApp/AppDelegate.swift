@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        TWTRTwitter.sharedInstance().start(withConsumerKey: "mJIo1RWkMQKt6nISwhEz3MCeX", consumerSecret: "8mV9YFTTs60TdwETaA2bG16mUU5M5C6HlAFmwon8tLYfeCZCpm")
+        TWTRTwitter.sharedInstance().start(withConsumerKey: "ConsumerKey", consumerSecret: "ConsumerSecret")
         let networkManager = NetworkManager()
         networkManager.getTweetRequest(byId: "4") { (tweetRequest) in
             print(tweetRequest)
@@ -46,6 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Failed to register: \(error)")
     }
     
+    func application(
+        _ application: UIApplication,
+        didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+        fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        let aps = userInfo["aps"] as! [String: AnyObject]
+    }
+    
     // MARK:- Push notifications
     
     func registerForPushNotifications() {
@@ -54,6 +62,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Permission granted: \(granted)")
             
             guard granted else { return }
+            
+            let retweetAction = UNNotificationAction(identifier: "retweet_action_identifier", title: "Retweet", options: [.foreground])
+            
+            let retweetCategory = UNNotificationCategory(identifier: "RETWEET", actions: [retweetAction], intentIdentifiers: [], options: [])
+            
+            UNUserNotificationCenter.current().setNotificationCategories([retweetCategory])
+            
             self.getNotificationSettings()
         }
     }
@@ -61,10 +76,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func getNotificationSettings() {
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
             print("Notification settings: \(settings)")
+            
             guard settings.authorizationStatus == .authorized else { return }
             UIApplication.shared.registerForRemoteNotifications()
         }
     }
 
 }
-
